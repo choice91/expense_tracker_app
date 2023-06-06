@@ -29,6 +29,7 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true, // 휴대폰의 nav bar까지 차지하지 않게 하는 옵션
       isScrollControlled: true, // full screen modal
       context: context,
       builder: (ctx) => NewExpense(
